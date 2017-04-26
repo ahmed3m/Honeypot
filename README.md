@@ -1,16 +1,15 @@
 # Project 9 - Honeypot
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 > Objective: Setup a honeypot and provide a working demonstration of its features.
 
 ### Required: Overview & Setup
 
-- [ ] A basic writeup (250-500 words) on the `README.md` desribing the overall approach, resources/tools used, findings
-- [ ] A specific, reproducible honeypot setup, ideally automated. There are several possibilities for this:
+- [X] A basic writeup (250-500 words) on the `README.md` desribing the overall approach, resources/tools used, findings
+	- There are lots of resources online available for setting up a honeypot; however, it is usually confusing and hard configuring and setting it up. Therefore, I used the [Modern Honey Network (MHN)](https://github.com/threatstream/mhn) which provides a streamlined approach to setting up a low-interaction honeypot. I first cloned the github repository on my host machine, then I started setting up the MHN server and honeypot virtual machines (VM) via Vagrant. Then inside the server VM, I cloned the mhn repository again but using a patched fork instead due to an [oustanding issue](https://github.com/threatstream/mhn/issues/383). Then I started installing and running the server using `./install_mhnserver.sh`. This allowed me to create the server that monitors the honeypot. Then after that, I went to the server IP address, in order to deploy the honeypot, which is in this case `Ubunto - Dionea`. [Dionea](https://github.com/rep/dionaea) is a low-interaction honeypot designed to trap malware although in this case, I will just use it to detect network activity specifically port scanning. Then using the honeypot VM, I executed the deploy command I copied from the browser. Finally, using the server VM, I ran a scan against the honeypot VM using nmap by using the following command `nmap -sV -P0 10.254.254.101`, and I was able to see the attacks in the attacks page.
+- [X] A specific, reproducible honeypot setup, ideally automated:
 	- A Vagrantfile or Dockerfile which provisions the honeypot as a VM or container
-	- A bash script that installs and configures the honeypot for a specific OS
-	- Alternatively, **detailed** notes added to the `README.md` regarding the setup, requirements, features, etc.
 
 ### Required: Demonstration
 
