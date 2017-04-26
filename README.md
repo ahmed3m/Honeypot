@@ -17,3 +17,4 @@ Time spent: **5** hours spent in total
 	- I used nmap for the attack. nmap maps a network by sending packets and analyzing responses. It can detect hosts, services, OS, and more. The command I used for the attack was `nmap -sV -P0 10.254.254.101`. This detected the ports
 - [X] An example of the data captured by the honeypot (example: IDS logs including IP, request paths, alerts triggered)
 - [X] A screen-cap of the attack being conducted
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
