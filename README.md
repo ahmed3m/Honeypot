@@ -13,20 +13,7 @@ Time spent: **5** hours spent in total
 
 ### Required: Demonstration
 
-- [ ] A basic writeup of the attack (what offensive tools were used, what specifically was detected by the honeypot)
-- [ ] An example of the data captured by the honeypot (example: IDS logs including IP, request paths, alerts triggered)
-- [ ] A screen-cap of the attack being conducted
-    
-### Optional: Features
-- Honeypot
-	- [ ] HTTPS enabled (self-signed SSL cert)
-	- [ ] A web application with both authenticated and unauthenticated footprint
-	- [ ] Database back-end
-	- [ ] Custom exploits (example: intentionally added SQLI vulnerabilities)
-	- [ ] Custom traps (example: modified version of known vulnerability to prevent full exploitation)
-	- [ ] Custom IDS alert (example: email sent when footprinting detected)
-	- [ ] Custom incident response (example: IDS alert triggers added firewall rule to block an IP)
-- Demonstration
-	- [ ] Additional attack demos/writeups
-	- [ ] Captured malicious payload
-	- [ ] Enhanced logging of exploit post-exploit activity (example: attacker-initiated commands captured and logged)
+- [X] A basic writeup of the attack (what offensive tools were used, what specifically was detected by the honeypot)
+	- I used nmap for the attack. nmap maps a network by sending packets and analyzing responses. It can detect hosts, services, OS, and more. The command I used for the attack was `nmap -sV -P0 10.254.254.101`. This detected the ports
+- [X] An example of the data captured by the honeypot (example: IDS logs including IP, request paths, alerts triggered)
+- [X] A screen-cap of the attack being conducted
