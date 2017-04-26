@@ -14,7 +14,8 @@ Time spent: **5** hours spent in total
 ### Required: Demonstration
 
 - [X] A basic writeup of the attack (what offensive tools were used, what specifically was detected by the honeypot)
-	- I used nmap for the attack. nmap maps a network by sending packets and analyzing responses. It can detect hosts, services, OS, and more. The command I used for the attack was `nmap -sV -P0 10.254.254.101`. This detected the ports
+	- I used nmap for the attack. nmap maps a network by sending packets and analyzing responses. It can detect hosts, services, OS, and more. The command I used for the attack was `nmap -sV -P0 10.254.254.101`. This detected the open ports, their services, as well as their version.
 - [X] An example of the data captured by the honeypot (example: IDS logs including IP, request paths, alerts triggered)
+	- The honeypot was able to capture the time of the attack, the source IP address, the destination/targetted port, and the protocol used as seen as in the below walkthrough.
 - [X] A screen-cap of the attack being conducted
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/OeD6KTX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
